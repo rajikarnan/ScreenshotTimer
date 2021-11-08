@@ -4,8 +4,9 @@ var JSCapture = JSCapture || (function () {
 
   'use strict';
   function capture(number) {
-   const a = navigator.mediaDevices.getDisplayMedia;
-  const takeScreenshot = async function() {
+    
+    const a = navigator.mediaDevices.getDisplayMedia;
+    const takeScreenshot = async function() {
     const stream = await navigator.mediaDevices.getDisplayMedia({
 
       video : {mediaSource : 'screen'}
@@ -18,14 +19,11 @@ var JSCapture = JSCapture || (function () {
 
     track.stop;
 
-    var newcanvas = '<canvas id ="canvas_'+ number +'" ></canvas><div id = "time'+ number +'"></div>';
+    var newcanvas = '<canvas id ="canvas_'+ number +'" width = "500" height="500" ></canvas><div style="padding=10px" id = "time'+ number +'"></div>';
             $("#container").append(newcanvas);
             
 
     const canvas = document.getElementById('canvas_'+number);
-
-    canvas.width = bitmap.width;
-    canvas.height = bitmap.height;
 
     const context = canvas.getContext('2d');
 
@@ -45,10 +43,6 @@ var JSCapture = JSCapture || (function () {
       type: 'image/jpeg'
     } )
     ];
-
-    var newimg = '<img id ="img_"+number src=""></img>';
-            $("#TimeTrackerBtn").append(newimg);
-            $("#img_"+number).attr("src", file);
 return file;
 }
    takeScreenshot();
