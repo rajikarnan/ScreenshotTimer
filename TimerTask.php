@@ -47,7 +47,7 @@ var config = {};
 <div id= "container">
 <input id="TimeSlot" name="Timer" type="text">
     <input id="ScreenshotNo" name="NoOfScreenshots" type="text">
-    <button  id="TimeTrackerBtn"  onclick="TimeTracking_Start()">Start Time Tracking</button> 
+    <button  id="TimeTrackerBtn"  onclick="TimeTracking_Start()">Start Timer</button> 
 
 <canvas id = "screenshot"></canvas>
     <div style="padding: 10px; text-align:center" id="Timer"></div>
